@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Founder Section</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background:#0c0c0c;
+  color:white;
+}
+
+/* SECTION */
+.founder{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 8%;
+  background:linear-gradient(90deg,#111 40%, #0c0c0c 100%);
+  position:relative;
+  overflow:hidden;
+}
+
+/* LEFT TEXT */
+.founder-text{
+  max-width:600px;
+  z-index:2;
+}
+
+.founder-text h1{
+  font-size:48px;
+  margin-bottom:20px;
+  background: url();
+}
+
+.founder-text p{
+  line-height:1.7;
+  font-size:18px;
+  color:#ccc;
+  margin-bottom:30px;
+}
+
+.connect{
+  color:#e09b6c;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* RIGHT IMAGE CONTAINER */
+.founder-img{
+  position:relative;
+  width:420px;
+  height:520px;
+  z-index:2;
+}
+
+/* Circular Ripple Pattern */
+.circle-pattern{
+  position:absolute;
+  width:600px;
+  height:600px;
+  border-radius:50%;
+  top:50%;
+  right:-120px;
+  transform:translateY(-50%);
+  background:
+    radial-gradient(circle at center,
+      rgba(255,255,255,0.07) 1px,
+      transparent 2px
+    );
+  background-size:60px 60px;
+  opacity:0.2;
+}
+
+/* Big Faded Circle Rings */
+.rings{
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  top:50%;
+  right:-60px;
+  transform:translateY(-50%);
+  background:radial-gradient(circle,
+      rgba(255,255,255,0.05) 30%,
+      transparent 70%);
+}
+
+/* Accent Orange Circles */
+.accent1,
+.accent2{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(224,155,108,0.4);
+  filter:blur(2px);
+}
+
+.accent1{
+  width:80px;
+  height:80px;
+  top:40%;
+  right:150px;
+}
+
+.accent2{
+  width:40px;
+  height:40px;
+  bottom:20%;
+  right:80px;
+}
+
+/* Founder Image */
+.founder-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:20px;
+  position:relative;
+  z-index:3;
+}
+
+/* Name Card */
+.name-card{
+  position:absolute;
+  bottom:40px;
+  left:-30px;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  padding:15px 25px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.2);
+  z-index:4;
+}
+
+.name-card h3{
+  font-size:16px;
+}
+
+.name-card p{
+  margin:0;
+  font-size:16px;
+  color:var(#ccc);
+  font-weight: bolder;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .founder{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .founder-img{
+    margin-top:40px;
+  }
+
+  .name-card{
+    left:50%;
+    transform:translateX(-50%);
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="founder">
+
+  <!-- LEFT SIDE -->
+  <div class="founder-text">
+    <h1>Meet my Portfolio</h1>
+    <p>
+      I am a self-taught frontend developer at the beginner level,
+       passionate about creating responsive and modern websites.
+    </p>
+
+    <a href="#" class="connect">Connect with MK →</a>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="founder-img">
+    <img src="IMG_1592997297.jpg" alt="I'm">
+
+    <div class="name-card">
+      <h3>M. KALIYANI</h3>
+      <p>Frontend beginner, Selfmade</p>
+    </div>
+  </div>
+
+  <!-- Background Effects -->
+  <div class="circle-pattern"></div>
+  <div class="rings"></div>
+  <div class="accent1"></div>
+  <div class="accent2"></div>
+
+</section>
+
+</body>
+</html>
